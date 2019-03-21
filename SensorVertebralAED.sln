@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28711.60
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorVertebral.Dominio", "SensorVertebral.Dominio\SensorVertebral.Dominio.csproj", "{E67787FC-A37D-42FD-A902-82FFEE3A907D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SensorVertebral", "SensorVertebral\SensorVertebral.csproj", "{CBA24A7F-FA54-4F94-B37A-BDEAB9A7A819}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E67787FC-A37D-42FD-A902-82FFEE3A907D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E67787FC-A37D-42FD-A902-82FFEE3A907D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E67787FC-A37D-42FD-A902-82FFEE3A907D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E67787FC-A37D-42FD-A902-82FFEE3A907D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA24A7F-FA54-4F94-B37A-BDEAB9A7A819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA24A7F-FA54-4F94-B37A-BDEAB9A7A819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA24A7F-FA54-4F94-B37A-BDEAB9A7A819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA24A7F-FA54-4F94-B37A-BDEAB9A7A819}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A774BABC-B789-4A4F-AA68-4BEB2590C603}
+	EndGlobalSection
+EndGlobal
