@@ -7,57 +7,23 @@ namespace SensorVertebral
     {
         static void Main(string[] args)
         {
+            Pilha pilha = new Pilha();
             do
             {
                 Console.Clear();
+                double peso = new Random().Next(20, 120);
 
-                Pilha pilha = new Pilha();
-                Random randNum = new Random();
-                double suportado, peso, totalPeso;
-                suportado = peso = totalPeso = 0;
+                if (pilha.LimiteSuportaPeso())
+                    pilha.InserirPeso(peso);
+                else
+                    Console.WriteLine($"\nO peso empilhado ultrapassou o limite suportado!");
 
-                for (int i = 0; i <= 24; i++)
-                {
-                    Dado vertebra = new Dado(randNum.Next(4, 15), randNum.Next(1, 9));
-                    peso = randNum.Next(2, 15);
-
-                    if (suportado < 0)
-                        suportado = vertebra.LimiteSuportado(peso + suportado);
-                    else
-                        suportado = vertebra.LimiteSuportado(peso);
-
-                    totalPeso += peso;
-
-                    pilha.Empilhar(vertebra);
-                }
-                suportado = VerificaLimite(pilha);
-
-                Console.WriteLine($"Peso suportado pela coluna: {suportado}");
-                Console.WriteLine($"\nPeso total empilhado: {totalPeso}");
-
-                if (totalPeso > suportado)
-                    Console.WriteLine($"\nO peso empilhado ultrapassou o limite suportado!\nAbaixe a carga!");
+                Console.WriteLine($"\nPeso suportado pela coluna: {pilha.VerificaLimite()}");
+                Console.WriteLine($"\nPeso total empilhado: {pilha.Peso}");
 
             } while (Console.ReadLine() == "");
 
             Console.ReadKey();
-        }
-
-        public static double VerificaLimite(Pilha pilha)
-        {
-            Elemento atual;
-            double limite = 0;
-            int vert = 0;
-            atual = pilha.Consultar().prox;
-
-            while (atual != null)
-            {
-                limite += atual.dado.limite;
-                atual = atual.prox;
-                vert++;
-            }
-
-            return limite;
         }
     }
 }

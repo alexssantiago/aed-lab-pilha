@@ -2,18 +2,15 @@
 {
     public class Dado
     {
-        public double percent { get; set; }
-        public double limite { get; set; }
+        public double Percent { get; }
+        public double Limite { get; }
 
         public Dado(double percent, double limite)
         {
-            this.percent = percent;
-            this.limite = limite;
+            this.Percent = percent;
+            this.Limite = limite;
         }
 
-        public double LimiteSuportado(double peso)
-        {
-            return this.limite - (this.percent * peso) / 100;
-        }
+        public double PesoSuportado(double peso) => this.Limite - (this.Percent * peso) / 100;
     }
 }
